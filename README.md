@@ -14,6 +14,7 @@ docker run --rm -it -v ${PWD}:/home/schcrwlr \
   --schemas=public \
   --info-level=standard \
   --command=schema \
-  --output-format=svg \
-  --output-file=graph.svg
+  --output-format=png \
+  --output-file=graph.png
 ```
+> formate can be `png` or `svg`
