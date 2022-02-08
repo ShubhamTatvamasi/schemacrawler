@@ -3,14 +3,14 @@
 generate schema file from database:
 ```bash
 docker run --rm -it -v ${PWD}:/home/schcrwlr \
-  schemacrawler/schemacrawler \
-  /opt/schemacrawler/schemacrawler.sh \
+  schemacrawler/schemacrawler:v16.16.11 \
+  /opt/schemacrawler/bin/schemacrawler.sh \
   --server=postgresql \
-  --host=192.168.0.52 \
+  --host=172.31.23.100 \
+  --port=30267 \
   --database=magma \
   --user=postgres \
   --password=postgres \
-  --port=5432 \
   --schemas=public \
   --info-level=standard \
   --command=schema \
@@ -18,3 +18,14 @@ docker run --rm -it -v ${PWD}:/home/schcrwlr \
   --output-file=graph.png
 ```
 > format can be `png` or `svg`
+
+Install psql client
+```bash
+sudo apt install postgresql-client -y
+```
+
+connect to database:
+```bash
+export PGPASSWORD=postgres
+psql -U postgres -d magma -h 172.31.23.100 -p 30267
+```
