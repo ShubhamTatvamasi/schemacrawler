@@ -17,7 +17,7 @@ docker run --rm -it -v ${PWD}:/home/schcrwlr \
   --output-format=png \
   --output-file=graph.png
 ```
-> format can be `png` or `svg`
+> format can be `png` or `svg` and default port is `5432`
 
 Install psql client
 ```bash
