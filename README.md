@@ -3,7 +3,7 @@
 generate schema file from database:
 ```bash
 docker run --rm -it -v ${PWD}:/home/schcrwlr \
-  schemacrawler/schemacrawler:v16.21.1 \
+  schemacrawler/schemacrawler:v16.21.2 \
   /opt/schemacrawler/bin/schemacrawler.sh \
   --server=postgresql \
   --host=172.31.23.100 \
